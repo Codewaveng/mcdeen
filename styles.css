@@ -592,16 +592,17 @@ p {
 }
 
 .brand-strip {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 1rem;
-  justify-content: center;
+  align-items: stretch;
 }
 
 .brand-strip span {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
   min-height: 70px;
   padding: 0.9rem 1.2rem;
   background: rgba(255, 255, 255, 0.8);
@@ -609,7 +610,9 @@ p {
   border-radius: 18px;
   color: var(--forest);
   font-weight: 700;
+  line-height: 1.45;
   text-align: center;
+  overflow-wrap: anywhere;
 }
 
 .review-grid {
@@ -908,7 +911,13 @@ textarea {
     height: 180px;
   }
 
+  .brand-strip {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
   .brand-strip span {
-    width: 100%;
+    width: auto;
+    padding: 1rem;
   }
 }
