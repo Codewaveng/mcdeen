@@ -921,3 +921,18 @@ textarea {
     padding: 1rem;
   }
 }
+
+.video-section {
+  padding-bottom: clamp(6rem, 10vw, 8rem);
+}
+
+.brands-section {
+  padding-top: clamp(6rem, 10vw, 8rem);
+  background: linear-gradient(180deg, rgba(242, 181, 68, 0.09), rgba(255, 248, 236, 0.96));
+  border-top: 1px solid rgba(18, 77, 59, 0.1);
+}
+
+.brands-section .section-head {
+  margin: 0 auto 2rem;
+  text-align: center;
+}
